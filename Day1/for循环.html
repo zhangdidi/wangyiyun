@@ -1,0 +1,120 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>for循环</title>
+</head>
+<style>
+	span{
+		border: 1px solid skyblue;
+		padding:5px;
+		display: inline-block;
+		margin: 3px;
+
+	}
+</style>
+<body>
+	
+</body>
+<script type="text/html">
+	for (var i =0; i <= 10; i++) {
+		console.log(i);
+	}
+
+	// 打印好友分组
+	for (var i = 1; i <=2; i++) {
+		console.log("好友列表"+i);
+		for (var j = 0; j <=3; j++) {
+			console.log("好友"+j)
+		}
+	}
+</script>
+<script type="text/html">
+	// 绘制图形
+	// 外循环控制行
+	for (var i = 0; i <3; i++) {
+		//内循环控制列
+		for (var j = 0; j <= 4; j++) {
+			window.document.write("*");
+		}
+		window.document.write('<br>');
+	}
+</script>
+<script type="text/html">
+	// 绘制三角形
+	for (var i = 0; i < 5; i++) {
+
+		for (var j = 0; j <= i; j++) {
+			window.document.write("*");
+		}
+		window.document.write("<br/>")
+	}
+</script>
+<script type="text/html">
+	// 倒三角
+	 for (var i = 0; i < 5; i++) {
+
+		for (var j = i; j <5; j++) {
+			window.document.write("*");
+		}
+		window.document.write("<br/>")
+	}
+</script>
+	
+<script type="text/html">
+	for(var i=0;i<40;i++){
+		for(var j=0;j<=i;j++){
+			window.document.write(j+1+"  ")
+		}
+		window.document.write('<br/>')
+	}
+</script>
+
+<script type="text/html">
+	// 正三角形
+	for(var i=0;i<5;i++){
+		for(var j=0;j<5-i;j++){
+			window.document.write("-")
+		}
+		for(var m=0;m<2*i+1;m++){
+			window.document.write('*');
+		}
+		window.document.write("<br/>")
+	}
+</script>
+
+<script type="text/html">
+	// 九九乘法表
+	for(var i=1;i<=9;i++){
+		for(var j=1;j<=i;j++){
+			window.document.write("<span>"+j+'*'+i+'='+i*j+"</span>")
+		}
+		window.document.write('<br/>')
+	}
+</script>
+
+<script type="text/html">
+	// 求1-100之间所有偶数和，所有基数和
+	var evenSum=0,oddSum=0;
+	for (var i = 0; i <=100; i++) {
+		if(i%2===0){
+			evenSum+=i;
+		}else{
+			oddSum+=i;
+		}
+	}
+
+	console.log("所有偶数和："+evenSum);
+	console.log("所有基数和："+oddSum)
+</script>
+
+<script>
+	//本金10000元存入银行，年利率千分之三，每过一年，将本金和利息作为新的本金，计算五年后，获得的本金是多少？
+	var money=10000;
+	var rote=0.003;
+	for (var i = 1; i <=5; i++) {
+		money=money*(1+rote);
+	}
+	console.log(money);
+</script>
+</html>

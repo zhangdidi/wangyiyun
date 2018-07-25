@@ -1,0 +1,104 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>基础知识</title>
+</head>
+<body>
+	
+</body>
+<script type="text/html">
+	console.log(10);
+	console.log(typeof 10);
+	// number类型
+	console.log(typeof Infinity);
+	// object类型
+	console.log( typeof null);
+	// NAN
+	console.log('张三'-10);
+	// 字符串类型
+	console.log('world');
+	console.log('真三"明天"');
+	// Boolean类型
+	// 任何非零数值都是true，包括正负无穷大，只有0和NaN是false
+	// 任何非空字符串都是true，只有空字符串是false，
+	// 任何对象都是true，只有null和undefined是false
+	var bool=Boolean(NaN);
+	console.log(bool);
+	var str1=null;
+	var str2=undefined;
+	console.log(str1==str2);
+	console.log(str1===str2);
+	// 类型转换
+	var num=123;
+	var str=num.toString();
+</script>
+<script type="text/html">
+
+	// toString不会改变原有的类型
+	var num=123;
+	console.log(typeof num);
+	console.log(num.toString());
+	console.log(typeof num);
+	// toString函数
+	console.log(toString(null));
+
+	// 字符串转成数字
+	var str1='88';
+	var res1=Number(str1);
+	console.log(typeof res1);
+
+
+	var str2='1122a';
+	var res2=Number(str2);
+	console.log(res2);
+	// 空字符串会转成0
+	console.log(Number(''));
+	// undefined转成NaN
+	console.log(Number(undefined))
+
+	// parseInt()整数
+	var str="122abc";
+	console.log(parseInt(str))
+</script>
+<script type="text/html">
+	// 后缀++
+	var num1=20,num2=30;
+		var res=(num1++)+(num2++);
+		console.log(res)
+		console.log(num1);
+		console.log(num2);
+
+
+	var num1=20,num2=30;
+		var res=(++num1)+(++num2);
+		console.log(res)
+		console.log(num1);
+		console.log(num2);
+		console.log(isNaN("123"))
+
+	12>2? console.log("12"):console.log(2)
+</script>
+
+<script>
+	//用户从键盘输入3个数，找到最大的并输出？
+		var num1,num2,num3,max;
+
+	//定义三个变量，接受用户输入的值
+	num1=Number(pormpt('请输入第一个数字'));
+	num2= +(pormpt('请输入第二个数字'));
+	num3= +(pormpt('请输入第三个数字'));
+
+	//利用prompt()接受用户输入的值
+	// 3,定义变量保存最大值
+	max=num1>num2? num1 : num2;
+	max=max>num3? max : num3;
+
+	// 4利用三目运算符进行两两比较
+
+	// 5，输出结果
+	console.log(max)
+
+	//输出
+</script>
+</html>
